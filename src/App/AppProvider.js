@@ -37,6 +37,7 @@ export class AppProvider extends React.Component {
         if(this.state.firstVisit) return;
         let prices = await this.prices();
         // console.log(prices);
+        prices = prices.filter(price => Object.keys(price).length);
         this.setState({prices});
     }
 
