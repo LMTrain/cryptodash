@@ -42,7 +42,7 @@ export class AppProvider extends React.Component {
     fetchPrices = async () => {
         if(this.state.firstVisit) return;
         let prices = await this.prices();
-        // console.log(prices);
+        console.log("PRICES :", prices);
         prices = prices.filter(price => Object.keys(price).length);
         this.setState({prices});
     }
@@ -97,6 +97,7 @@ export class AppProvider extends React.Component {
         if(favorites.length < MAX_FAVORITES){
             favorites.push(key);
             this.setState({favorites});
+            console.log("FAVORITES_ADDCOINS :", favorites)
         }
     }
 
@@ -119,11 +120,13 @@ export class AppProvider extends React.Component {
             this.fetchPrices();
             this.fetchHistorical();
         });
+        console.log(currentFavorite)
         localStorage.setItem('cryptoDash', JSON.stringify({
-            favorites: this.state.favorites,
+            favorites: this.state.favorites,            
             currentFavorite
+            
         }));
-        
+        console.log("CONFIRMFAVORITES: ", currentFavorite)
     }
 
     setCurrentFavorite = (sym) => {
@@ -144,7 +147,9 @@ export class AppProvider extends React.Component {
             return {page: 'settings', firstVisit: true}
         }
         let {favorites, currentFavorite} = cryptoDashData;
+        console.log("CONFIRMFAVORITES: ", currentFavorite);
         return {favorites, currentFavorite};
+        
     }
 
     setPage = page => this.setState({page})
