@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 ##
 Building beautifully fast dashboards with React, Context API, styled-components & CSS Grid.
 
@@ -43,3 +44,7 @@ Dashboard
 Themes
 
     Easily configure the app’s theme to be dark or light
+=======
+###
+Building beautifully fast dashboards with React, Context API, styled-components & CSS Grid.
+>>>>>>> 517f96cec99ce75fae32e1205f8a5f6fbd29feef
