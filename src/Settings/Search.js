@@ -12,7 +12,7 @@ const SearchGrid = styled.div`
 const SearchInput = styled.input`
     ${backgroundColor2}
     ${fontSize2}
-    border: 1px solid;
+    border: 3px solid;
     height: 25px;
     color: #1163c9;
     place-self: center left;
