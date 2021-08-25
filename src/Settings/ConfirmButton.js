@@ -24,7 +24,7 @@ export default function (){
         {({confirmFavorites}) =>
             <CenterDiv>
                 <ConfirmButtonStyled onClick={confirmFavorites}>
-                    Save Favorites
+                    Save LM Favorites
                 </ConfirmButtonStyled>
             </CenterDiv>
         }
