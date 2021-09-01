@@ -8,7 +8,7 @@ export default function(props){
                 return <div>Loading Coins...</div>
             }
             if(!firstVisit && !prices){
-                return <div> Loading Prices...</div>
+                return <div> Loading Crypto Prices...</div>
             }
             return <div>{props.children} </div>
         }}
